@@ -31,4 +31,4 @@ jobs:
 
     - name: Build
       run: npm run build
-    - run: echo "${{secrets.MY_PASSWORD}}" | sudo -S systemctl restart nginx  
+    - run: sudo  systemctl restart nginx  
