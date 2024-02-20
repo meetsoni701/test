@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches: 
-      - main
+      - meet
   pull_request:
     branches: 
-      - main
+      - meet
 
 jobs:
   build:
