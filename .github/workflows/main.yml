@@ -1,0 +1,34 @@
+name: CI/CD
+
+on:
+  push:
+    branches: 
+      - meet
+  pull_request:
+    branches: 
+      - meet
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js 
+      uses: actions/setup-node@v1
+      
+      
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run the tests
+      run: npm test
+
+    - name: Build
+      run: npm run build
+    - run:  echo "${{secrets.MY_PASSWORD}}"| sudo -S systemctl restart nginx  
