@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches: 
-      - meet
+      - main
   pull_request:
     branches: 
-      - meet
+      - main
   workflow_dispatch:
 
 
