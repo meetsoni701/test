@@ -33,6 +33,6 @@ jobs:
 
     - name: Build
       run: npm run build
-    - run: sudo -S systemctl restart nginx  
+    - run: sudo  systemctl restart nginx  
     - run: pm2 restart all
     
